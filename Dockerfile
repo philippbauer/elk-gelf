@@ -28,8 +28,7 @@ ADD ./elasticsearch.yml /etc/elasticsearch/elasticsearch.yml
 
 ### configure logstash
 
-ADD ./logstash-tcp-input.conf /etc/logstash/conf.d/logstash-tcp-input.conf
-ADD ./logstash-udp-input.conf /etc/logstash/conf.d/logstash-udp-input.conf
+ADD ./logstash-gelf-input.conf /etc/logstash/conf.d/logstash-gelf-input.conf
 ADD ./logstash-elasticsearch-output.conf /etc/logstash/conf.d/logstash-elasticsearch-output.conf
 
 
@@ -47,6 +46,6 @@ RUN chmod +x /etc/service/elk-logback/run
 
 ### start up everthing
 
-EXPOSE 9200 4560 4570/udp 5601
+EXPOSE 9200 5601 12201
 
 CMD [ "/sbin/my_init" ]
