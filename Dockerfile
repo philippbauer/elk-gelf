@@ -1,6 +1,4 @@
 FROM phusion/baseimage
-MAINTAINER Fang Yuan <fayndee@hotmail.com>
-
 
 ### install elasticsearch and logstash
 
