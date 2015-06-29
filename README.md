@@ -6,7 +6,8 @@ This repo was forked of fayndee/elk-logback!
 ### Get started
 
 1. Pull the docker image: `docker pull philippbauer/elk-gelf`
-2. Run the docker container: `docker run -d -p 9200:9200 -p 12201:12201 -p 5601:5601 philippbauer/elk-gelf`
+2. Run the docker container:
+`docker run -d -v /root/elasticsearch/:/var/lib/elasticsearch/elasticsearch -p 9200:9200 -p 12201:12201/udp -p 5601:5601 philippbauer/elk-gelf`
 
 ### Embedded configuration
 
