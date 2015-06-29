@@ -46,7 +46,7 @@ ADD ./run.sh /etc/service/elk-logback/run
 RUN chmod +x /etc/service/elk-logback/run
 
 ### volume with elasticsearch-data
-VOLUME ["/etc/elasticsearch/data"]
+VOLUME ["/var/lib/elasticsearch/elasticsearch"]
 
 
 ### start up everthing
